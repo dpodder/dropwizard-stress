@@ -23,3 +23,11 @@ How to run the stress test
 Follow the instructions for "How to test the stress-client application", but instead of using
 `check.yml`, use `stress.yml`. The test will take much longer, exposing bugs that manifest under
 load.
+
+Supported Java versions
+---
+
+This repro was tested with the following JDK releases:
+
+* Java/JDK 8 rev. 202
+* Java/JDK 8 rev. 152
