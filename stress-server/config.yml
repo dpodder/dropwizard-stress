@@ -1,0 +1,86 @@
+server:
+  requestLog:
+    appenders:
+    - type: console
+      threshold: INFO
+      target: stdout
+      # For the logFormat spec, see: https://logback.qos.ch/manual/layouts.html#AccessPatternLayout
+      logFormat: '%h %l %u [%t{ISO8601,UTC}] "%r" %s %b "%i{debug-request-id}" "%i{Referer}" "%i{User-Agent}" %D'
+
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+  adminConnectors:
+    - type: http
+      port: 8081
+
+logging:
+  level: DEBUG
+  loggers:
+    "io.dropwizard": INFO
+  appenders:
+    - type: console
+      threshold: INFO
+      target: stdout
+      # For the logFormat spec, see: https://logback.qos.ch/manual/layouts.html#ClassicPatternLayout
+      logFormat: '%d{ISO8601,UTC} %5p %mdc{debug-request-id:-na} %logger{40} - %m%n%rEx'
+
+categories:
+  - id: 68d0a04a-d301-4c1c-b1cf-4ac3e0978d90
+    name: LOCATION
+    tags: [ 'geography', 'area', 'map' ]
+    items:
+      - id: 6c1da6b3-3720-4810-ae4f-7b233c8a8467
+        name: USA
+        tags: [ 'countries', 'country' ]
+
+      - id: 0c2fdfd9-f5c8-46a6-9ebb-1d20d96353ff
+        name: ALABAMA
+        tags: [ 'states', 'state' ]
+      - id: bc1bcfcb-06f8-4c3d-a65a-bc09ffc48b15
+        name: CALIFORNIA
+        tags: [ 'states', 'state' ]
+      - id: 036e18b5-6c16-40df-bd5a-8478cb7f3636
+        name: FLORIDA
+        tags: [ 'states', 'state' ]
+      - id: 8ae7531a-535e-49ee-8ffd-2fb54a6ea6ff
+        name: MAINE
+        tags: [ 'states', 'state' ]
+      - id: e5d7fc98-b937-4a8a-967c-04bc3bec0758
+        name: MASSACHUSETTS
+        tags: [ 'states', 'state' ]
+      - id: b6a21db0-fa26-44c8-8197-a153f017b2d1
+        name: NEW YORK
+        tags: [ 'states', 'state' ]
+      - id: 4fca83d9-8929-4cda-9cce-dd3cd1baa0e0
+        name: TEXAS
+        tags: [ 'states', 'state' ]
+      - id: 448ab8ff-dda2-4bbf-8dd9-4a9d4b15d6ac
+        name: WASHINGTON
+        tags: [ 'states', 'state' ]
+
+      - id: 3b0c0d06-0a40-4ae6-ae5b-eb06e389b596
+        name: MONTGOMERY
+        tags: [ 'cities', 'city' ]
+      - id: fab31b35-1dd5-465a-b462-657023fe1501
+        name: SACRAMENTO
+        tags: [ 'cities', 'city' ]
+      - id: e7b10434-7911-4f55-8142-6ad330d50634
+        name: TALLAHASSEE
+        tags: [ 'cities', 'city' ]
+      - id: d4ac1d3c-1966-43c1-8faa-a6d308c9a821
+        name: AUGUSTA
+        tags: [ 'cities', 'city' ]
+      - id: 73cdb9f4-0f9e-46c4-aca9-05d13e0090b8
+        name: BOSTON
+        tags: [ 'cities', 'city' ]
+      - id: 3a23d102-5e0e-4445-9d31-3e7e5a8afc8c
+        name: ALBANY
+        tags: [ 'cities', 'city' ]
+      - id: f8602a01-2ad8-4c7b-9bbc-0ecedb4f9650
+        name: AUSTIN
+        tags: [ 'cities', 'city' ]
+      - id: 528854d3-937e-41f7-8abc-9ba2afb863bb
+        name: OLYMPIA
+        tags: [ 'cities', 'city' ]

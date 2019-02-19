@@ -1,0 +1,33 @@
+# Workload configuration
+workerCount: 8
+sessionCount: 16
+requestsPerSession: 500
+catQueryProbability: 0.5
+
+# Remote service config
+remoteService: 'http://localhost:8080'
+connectTimeout: 500
+readTimeout: 500
+updateInterval: 0.5
+
+# Data Set
+categories:
+- name: 'LOCATION'
+  items:
+  - USA
+  - ALABAMA
+  - CALIFORNIA
+  - FLORIDA
+  - MAINE
+  - MASSACHUSETTS
+  - NEW YORK
+  - TEXAS
+  - WASHINGTON
+  - MONTGOMERY
+  - SACRAMENTO
+  - TALLAHASSEE
+  - AUGUSTA
+  - BOSTON
+  - ALBANY
+  - AUSTIN
+  - OLYMPIA
