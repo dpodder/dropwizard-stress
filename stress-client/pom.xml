@@ -24,7 +24,7 @@
         <junit.version>4.12</junit.version>
         <lombok.version>1.16.22</lombok.version>
         <jersey.version>2.28</jersey.version>
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.10.1</jackson.version>
         <mainClass>com.example.tools.stressclient.StressClient</mainClass>
     </properties>
 
